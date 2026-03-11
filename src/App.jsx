@@ -252,7 +252,7 @@ export default function YPop() {
   const navSolid = scrollY > 60;
 
   // ★ 아래 URL을 본인의 Google Apps Script 웹앱 URL로 교체하세요
-  const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbx7HOUf5C_CS2M5gaphsZC_WC0D8r21diBCKOzQ_jELDdrNJ0SMWZz2Wu8hFovPFMlG/exec";
+  const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbx2EC6h2_PqY4X1C_-F_DynV7WaQ1kmcYr-HJgTDmGnJdluD76vp6gZCC5Md6FvLrXM/exec";
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -398,7 +398,7 @@ export default function YPop() {
               cursor: "pointer",
             }}
           >
-            구매대행 신청
+            조사 대행 신청
           </button>
         </div>
 
@@ -440,7 +440,7 @@ export default function YPop() {
             gap: 24,
           }}
         >
-          {[["서비스", "services"], ["이용방법", "howto"], ["요금안내", "pricing"], ["FAQ", "faq"], ["구매대행 신청", "request"]].map(([l, id]) => (
+          {[["서비스", "services"], ["이용방법", "howto"], ["요금안내", "pricing"], ["FAQ", "faq"], ["조사 대행 신청", "request"]].map(([l, id]) => (
             <button
               key={id}
               onClick={() => scrollTo(id)}
@@ -505,7 +505,7 @@ export default function YPop() {
         <div style={{ maxWidth: 800, textAlign: "center", position: "relative", zIndex: 1, animation: "slideUp 0.8s ease" }}>
           <div className="hero-badge">
             <span style={{ width: 6, height: 6, borderRadius: "50%", background: C.accent }} />
-            중국 구매대행 전문 물류 파트너
+            중국 시장조사 대행 전문 파트너
           </div>
 
           <h1
@@ -521,7 +521,7 @@ export default function YPop() {
           >
             <span style={{ color: C.accent }}>Y-POP</span>
             <br />
-            <span style={{ color: C.text }}>쉽고 빠른</span>{" "}
+            <span style={{ color: C.text }}>정확하고 빠른</span>{" "}
             <span
               style={{
                 background: `linear-gradient(90deg, ${C.yellow}, ${C.accent})`,
@@ -529,7 +529,7 @@ export default function YPop() {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              중국 구매대행
+              중국 시장조사
             </span>
           </h1>
 
@@ -543,14 +543,14 @@ export default function YPop() {
               margin: "0 auto 40px",
             }}
           >
-            타오바오 · 1688 · 알리바바 상품을 원하는 만큼,
+            타오바오 · 1688 · 알리바바 시장의 트렌드와 상품을
             <br />
-            검수부터 배송까지 한 번에 해결하세요.
+            데이터 기반으로 조사하고 리포트해 드립니다.
           </p>
 
           <div style={{ display: "flex", gap: 16, justifyContent: "center", flexWrap: "wrap" }}>
             <button className="cta-btn" onClick={() => scrollTo("request")}>
-              구매대행 신청하기
+              조사 신청하기
               <span style={{ fontSize: 18 }}>→</span>
             </button>
             <button
@@ -585,9 +585,9 @@ export default function YPop() {
             }}
           >
             {[
-              { n: 15000, s: "+", l: "누적 주문 건수" },
+              { n: 3200, s: "+", l: "누적 조사 건수" },
               { n: 98, s: "%", l: "고객 만족도" },
-              { n: 7, s: "일", l: "평균 배송 소요" },
+              { n: 3, s: "일", l: "평균 리포트 소요" },
             ].map((item, i) => (
               <div key={i} style={{ textAlign: "center" }}>
                 <div style={{ fontFamily: "'Sora'", fontWeight: 800, fontSize: "clamp(28px, 4vw, 42px)", color: C.text }}>
@@ -608,36 +608,36 @@ export default function YPop() {
             Y-POP이 제공하는 서비스
           </h2>
           <p style={{ color: C.muted, fontFamily: "'Noto Sans KR'", fontSize: 15, marginTop: 12 }}>
-            소싱부터 통관까지, 전 과정을 전문 매니저가 관리합니다
+            중국 시장의 트렌드·상품·공장 정보를 전문 매니저가 조사합니다
           </p>
         </div>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 20 }}>
           <ServiceCard
-            icon="🛒"
-            title="구매대행"
-            desc="타오바오·1688·알리바바 등 중국 플랫폼 상품을 대신 구매해 드립니다. 최저가 소싱과 셀러 협상까지."
+            icon="📊"
+            title="시장 트렌드 조사"
+            desc="타오바오·1688 플랫폼의 실시간 인기 상품, 검색 키워드, 카테고리 트렌드를 분석해 드립니다."
             color={C.accent}
             delay={0}
           />
           <ServiceCard
-            icon="📦"
-            title="배송대행"
-            desc="중국 내 물류센터에서 한국까지 안전하고 빠른 배송. 합포장·분할 배송도 자유롭게."
+            icon="🔍"
+            title="상품 소싱 리서치"
+            desc="원하는 상품의 공급처·가격대·MOQ·품질 등급을 비교 분석하여 최적의 소싱처를 찾아드립니다."
             color={C.blue}
             delay={0.1}
           />
           <ServiceCard
-            icon="🔍"
-            title="검수 서비스"
-            desc="상품 수량·품질·불량 여부를 꼼꼼히 검수 후 사진으로 리포트해 드립니다."
+            icon="🏭"
+            title="공장 조사"
+            desc="1688·알리바바 공장의 생산 능력, 인증, 샘플 가능 여부 등을 직접 확인하고 리포트합니다."
             color={C.green}
             delay={0.2}
           />
           <ServiceCard
-            icon="🏭"
-            title="OEM / ODM"
-            desc="공장 소싱부터 샘플 제작, 대량 생산까지. 나만의 브랜드 상품을 만들어 보세요."
+            icon="📋"
+            title="경쟁사 분석"
+            desc="중국 내 경쟁 브랜드·상품의 가격, 리뷰, 판매량 데이터를 수집하여 비교 분석 리포트를 제공합니다."
             color={C.purple}
             delay={0.3}
           />
@@ -653,15 +653,15 @@ export default function YPop() {
               이용 방법
             </h2>
             <p style={{ color: C.muted, fontFamily: "'Noto Sans KR'", fontSize: 15, marginTop: 12 }}>
-              4단계로 간편하게 구매대행 신청하세요
+              4단계로 간편하게 조사 대행을 신청하세요
             </p>
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", gap: 36 }}>
-            <StepCard num={1} title="상품 URL 제출" desc="구매를 원하는 타오바오·1688 상품 링크를 붙여넣기만 하면 끝. 이미지 검색도 가능합니다." delay={0} />
-            <StepCard num={2} title="견적 확인 & 결제" desc="전문 매니저가 실시간 환율과 배송비를 반영한 정확한 견적을 안내해 드립니다." delay={0.15} />
-            <StepCard num={3} title="구매 & 검수" desc="결제 확인 후 즉시 구매를 진행하고, 중국 물류센터에서 꼼꼼한 검수를 거칩니다." delay={0.3} />
-            <StepCard num={4} title="한국 배송" desc="검수 완료 후 한국으로 발송. 항공·해운 선택 가능하며 실시간 배송 추적을 제공합니다." delay={0.45} />
+            <StepCard num={1} title="조사 요청 제출" desc="조사를 원하는 상품·키워드·카테고리 정보를 제출하면 끝. 타오바오·1688 링크도 가능합니다." delay={0} />
+            <StepCard num={2} title="견적 확인 & 결제" desc="조사 범위와 난이도에 따른 정확한 견적을 전문 매니저가 안내해 드립니다." delay={0.15} />
+            <StepCard num={3} title="시장 조사 진행" desc="결제 확인 후 전담 매니저가 중국 현지 플랫폼에서 데이터를 수집하고 분석합니다." delay={0.3} />
+            <StepCard num={4} title="리포트 전달" desc="조사 완료 후 상세 리포트를 전달해 드립니다. 추가 질문이나 보충 조사도 가능합니다." delay={0.45} />
           </div>
         </div>
       </section>
@@ -679,10 +679,10 @@ export default function YPop() {
           {[
             {
               name: "Lite",
-              sub: "소량 구매",
+              sub: "소규모 조사",
               price: "7%",
-              unit: "구매 수수료",
-              features: ["1건부터 신청 가능", "기본 검수 포함", "항공 배송", "카카오톡 상담"],
+              unit: "조사 수수료",
+              features: ["1건부터 신청 가능", "기본 리포트 제공", "3영업일 내 전달", "카카오톡 상담"],
               accent: C.blue,
               popular: false,
             },
@@ -690,8 +690,8 @@ export default function YPop() {
               name: "Pro",
               sub: "사업자 추천",
               price: "5%",
-              unit: "구매 수수료",
-              features: ["대량 주문 할인", "정밀 검수 + 사진 리포트", "항공 / 해운 선택", "전담 매니저 배정", "세금계산서 발행"],
+              unit: "조사 수수료",
+              features: ["대량 조사 할인", "심층 분석 + 데이터 리포트", "우선 처리", "전담 매니저 배정", "세금계산서 발행"],
               accent: C.accent,
               popular: true,
             },
@@ -700,7 +700,7 @@ export default function YPop() {
               sub: "대량 / OEM",
               price: "협의",
               unit: "맞춤 견적",
-              features: ["공장 소싱 대행", "OEM/ODM 제작 지원", "전용 물류 라인", "통관 대행 서비스", "월 정산 가능"],
+              features: ["공장 현지 실사", "OEM/ODM 타당성 조사", "경쟁사 종합 분석", "정기 시장 모니터링", "월 정산 가능"],
               accent: C.purple,
               popular: false,
             },
@@ -781,10 +781,10 @@ export default function YPop() {
           <div style={{ textAlign: "center", marginBottom: 48 }}>
             <div className="section-tag">REQUEST</div>
             <h2 style={{ fontFamily: "'Noto Sans KR'", fontWeight: 900, fontSize: "clamp(24px, 4vw, 36px)" }}>
-              구매대행 신청
+              조사 대행 신청
             </h2>
             <p style={{ color: C.muted, fontFamily: "'Noto Sans KR'", fontSize: 15, marginTop: 12 }}>
-              상품 링크만 보내주세요. 빠르게 견적을 안내해 드립니다.
+              조사하고 싶은 상품·키워드를 알려주세요. 빠르게 견적을 안내해 드립니다.
             </p>
           </div>
 
@@ -944,11 +944,11 @@ export default function YPop() {
 
               <div>
                 <label style={{ fontFamily: "'Noto Sans KR'", fontSize: 13, color: C.muted, marginBottom: 6, display: "block" }}>
-                  상품 URL *
+                  조사 대상 URL 또는 키워드 *
                 </label>
                 <input
                   className="input-field"
-                  placeholder="타오바오, 1688, 알리바바 상품 링크를 붙여넣으세요"
+                  placeholder="타오바오·1688 상품 링크 또는 조사할 키워드를 입력하세요"
                   value={formData.url}
                   onChange={(e) => setFormData({ ...formData, url: e.target.value })}
                 />
@@ -956,11 +956,11 @@ export default function YPop() {
 
               <div>
                 <label style={{ fontFamily: "'Noto Sans KR'", fontSize: 13, color: C.muted, marginBottom: 6, display: "block" }}>
-                  수량
+                  조사 희망 수량/범위
                 </label>
                 <input
                   className="input-field"
-                  placeholder="예: 100개"
+                  placeholder="예: 상위 10개 상품 비교, 공장 3곳 조사"
                   value={formData.qty}
                   onChange={(e) => setFormData({ ...formData, qty: e.target.value })}
                 />
@@ -981,7 +981,7 @@ export default function YPop() {
               </div>
 
               <button className="cta-btn" onClick={handleSubmit} disabled={isLoading} style={{ width: "100%", justifyContent: "center", marginTop: 8, opacity: isLoading ? 0.7 : 1 }}>
-                {isLoading ? "전송 중..." : "견적 요청하기"}
+                {isLoading ? "전송 중..." : "조사 신청하기"}
               </button>
             </div>
           )}
@@ -999,28 +999,28 @@ export default function YPop() {
 
         <div>
           <FAQItem
-            q="최소 주문 수량이 있나요?"
-            a="Lite 플랜은 1건부터 신청 가능합니다. Pro 플랜의 경우에도 최소 수량 제한은 없으며, 수량에 따라 할인율이 적용됩니다."
+            q="최소 조사 건수가 있나요?"
+            a="Lite 플랜은 1건부터 신청 가능합니다. Pro 플랜의 경우에도 최소 건수 제한은 없으며, 조사 범위에 따라 할인율이 적용됩니다."
           />
           <FAQItem
-            q="배송 기간은 얼마나 걸리나요?"
-            a="항공 배송 기준 평균 5~7영업일 소요됩니다. 해운의 경우 2~3주 정도 소요되며, 통관 상황에 따라 달라질 수 있습니다."
+            q="조사 리포트는 얼마나 걸리나요?"
+            a="기본 조사 기준 3~5영업일 소요됩니다. 심층 분석이나 공장 실사의 경우 1~2주 정도 소요되며, 조사 범위에 따라 달라질 수 있습니다."
           />
           <FAQItem
             q="사업자가 아니어도 이용할 수 있나요?"
-            a="네, 개인 고객도 Lite 플랜으로 자유롭게 이용 가능합니다. 개인통관고유부호만 있으면 됩니다."
+            a="네, 개인 고객도 Lite 플랜으로 자유롭게 이용 가능합니다. 별도 자격 요건 없이 누구나 신청할 수 있습니다."
           />
           <FAQItem
             q="결제는 어떻게 하나요?"
             a="무통장 입금과 카드 결제를 지원합니다. 사업자 고객의 경우 세금계산서 발행과 월 정산도 가능합니다."
           />
           <FAQItem
-            q="반품/교환이 가능한가요?"
-            a="상품 하자 시 중국 내 반품 및 교환을 대행해 드립니다. 단, 단순 변심에 의한 반품은 왕복 배송비가 발생합니다."
+            q="추가 조사나 보충 요청이 가능한가요?"
+            a="리포트 전달 후 1회 보충 조사를 무료로 제공합니다. 추가 범위의 조사가 필요한 경우 별도 견적을 안내해 드립니다."
           />
           <FAQItem
-            q="검수는 어떻게 이뤄지나요?"
-            a="중국 물류센터에서 수량 확인, 외관 검수, 불량 체크를 진행하며, 검수 사진과 리포트를 고객님께 공유합니다."
+            q="리포트는 어떤 형태로 받나요?"
+            a="PDF 또는 엑셀 형태의 상세 리포트로 전달됩니다. 상품 사진, 가격 비교, 공급처 정보, 트렌드 데이터 등이 포함됩니다."
           />
         </div>
       </section>
@@ -1042,9 +1042,9 @@ export default function YPop() {
                 <span style={{ fontFamily: "'Sora'", fontWeight: 800, fontSize: 22, color: C.text }}>-POP</span>
               </div>
               <p style={{ fontFamily: "'Noto Sans KR'", fontSize: 13, color: C.muted, lineHeight: 1.8 }}>
-                중국 구매대행·배송대행 전문 물류 파트너
+                중국 시장조사 대행 전문 파트너
                 <br />
-                소싱부터 배송까지 한 번에 해결합니다.
+                트렌드 분석부터 공장 조사까지 한 번에 해결합니다.
               </p>
             </div>
 
@@ -1067,7 +1067,7 @@ export default function YPop() {
                 바로가기
               </h4>
               <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-                {[["서비스 소개", "services"], ["이용방법", "howto"], ["요금 안내", "pricing"], ["구매대행 신청", "request"], ["FAQ", "faq"]].map(([l, id]) => (
+                {[["서비스 소개", "services"], ["이용방법", "howto"], ["요금 안내", "pricing"], ["조사 대행 신청", "request"], ["FAQ", "faq"]].map(([l, id]) => (
                   <button
                     key={id}
                     onClick={() => scrollTo(id)}
@@ -1123,7 +1123,7 @@ export default function YPop() {
             padding: "14px 0",
           }}
         >
-          구매대행 신청하기
+          조사 대행 신청하기
         </button>
       </div>
     </div>
