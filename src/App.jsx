@@ -252,7 +252,7 @@ export default function YPop() {
   const navSolid = scrollY > 60;
 
   // ★ 아래 URL을 본인의 Google Apps Script 웹앱 URL로 교체하세요
-  const GOOGLE_SHEET_URL = "여기에_본인의_웹앱_URL을_붙여넣으세요";
+  const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyg3jYNxjK_x5zE8gLpSWN9v6JRvfxIx1BsJu7fGH9jGysXSl5f7BVsdTPJUbbp7Ms6/exec";
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -985,6 +985,47 @@ export default function YPop() {
               <button className="cta-btn" onClick={handleSubmit} disabled={isLoading} style={{ width: "100%", justifyContent: "center", marginTop: 8, opacity: isLoading ? 0.7 : 1 }}>
                 {isLoading ? "전송 중..." : "조사 신청하기"}
               </button>
+
+              {/* 결제 계좌 안내 */}
+              <div
+                style={{
+                  marginTop: 16,
+                  padding: "16px 20px",
+                  borderRadius: 10,
+                  background: C.dark,
+                  border: `1px solid ${C.border}`,
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 14,
+                }}
+              >
+                <div
+                  style={{
+                    width: 40,
+                    height: 40,
+                    borderRadius: 10,
+                    background: `${C.yellow}15`,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: 18,
+                    flexShrink: 0,
+                  }}
+                >
+                  🏦
+                </div>
+                <div>
+                  <div style={{ fontFamily: "'Noto Sans KR'", fontSize: 12, color: C.muted, marginBottom: 4 }}>
+                    결제 계좌 안내
+                  </div>
+                  <div style={{ fontFamily: "'Sora', 'Noto Sans KR'", fontSize: 15, fontWeight: 700, color: C.text }}>
+                    국민은행 243702-04-111271
+                  </div>
+                  <div style={{ fontFamily: "'Noto Sans KR'", fontSize: 13, color: C.muted, marginTop: 2 }}>
+                    예금주: 한진수
+                  </div>
+                </div>
+              </div>
             </div>
           )}
         </div>
@@ -1060,7 +1101,7 @@ export default function YPop() {
               <p style={{ fontFamily: "'Noto Sans KR'", fontSize: 13, color: C.muted, lineHeight: 1.8 }}>
                 평일 09:00 ~ 18:00 (점심 12:30 ~ 13:30)
                 <br />
-                이메일: contact@y-pop.kr
+                이메일: bumjung71@naver.com
               </p>
             </div>
 
@@ -1093,9 +1134,11 @@ export default function YPop() {
 
           <div style={{ borderTop: `1px solid ${C.border}`, paddingTop: 24 }}>
             <p style={{ fontFamily: "'Noto Sans KR'", fontSize: 12, color: `${C.muted}88`, lineHeight: 1.8, textAlign: "center" }}>
-              상호: Y-POP (와이팝) | 사업자 등록번호: 000-00-00000 | 대표: 홍길동
+              상호: (주)범중네트웍스 | 사업자 등록번호: 357-87-00042 | 대표: 한진수
               <br />
-              통신판매 신고번호: 제 0000-서울강남-0000호 | 이메일: contact@y-pop.kr
+              법인등록번호: 120111-0751413 | 업태: 운수 및 창고업, 도매 및 소매업
+              <br />
+              소재지: 경기도 평택시 포승읍 평택항로 1-10, 1층 | 이메일: bumjung71@naver.com
               <br />
               © 2026 Y-POP. All Rights Reserved.
             </p>
