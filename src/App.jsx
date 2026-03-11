@@ -252,7 +252,7 @@ export default function YPop() {
   const navSolid = scrollY > 60;
 
   // ★ 아래 URL을 본인의 Google Apps Script 웹앱 URL로 교체하세요
-  const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbx2EC6h2_PqY4X1C_-F_DynV7WaQ1kmcYr-HJgTDmGnJdluD76vp6gZCC5Md6FvLrXM/exec";
+  const GOOGLE_SHEET_URL = "여기에_본인의_웹앱_URL을_붙여넣으세요";
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -521,12 +521,14 @@ export default function YPop() {
           >
             <span style={{ color: C.accent }}>Y-POP</span>
             <br />
-            <span style={{ color: C.text }}>정확하고 빠른</span>{" "}
+            <span style={{ color: C.text }}>정확하고 빠른</span>
+            <br />
             <span
               style={{
                 background: `linear-gradient(90deg, ${C.yellow}, ${C.accent})`,
                 WebkitBackgroundClip: "text",
                 WebkitTextFillColor: "transparent",
+                whiteSpace: "nowrap",
               }}
             >
               중국 시장조사
